@@ -6,14 +6,13 @@ import 'rxjs/add/operator/map';
     selector: 'searchBox',
     template: `
         <h1>Gigs list</h1>
-        <input type="text" placeholder="Text to search" id="searchInput" #searchInput>
         <div class="searchResults" *ngIf="initialized">
         	<table>
-        		<tr *ngFor="#data of datas">
-              <td>{{ data.date | slice:0:10}}</td>
-              <td><a href="#" (click)="gigDetail(data._id)">{{ data.bands}}</a></td>
-              <td> {{ data.venue }} </td>
-              </tr>
+            	<tr *ngFor="#data of datas">
+                <td>{{ data.date | slice:0:10}}</td>
+                <td><a href="#" (click)="gigDetail(data._id)">{{ data.bands}}</a></td>
+                <td> {{ data.venue }} </td>
+                </tr>
         	</table>
         </div>
         `
