@@ -1,0 +1,16 @@
+<h2>Add gig</h2>
+<form (ngSubmit)="addGig()" [ngFormModel]="userForm">
+	<div class="form-group">
+	    <label>Bands</label><input ngControl="bands" class="form-control">
+	</div>
+	<div class="form-group">
+	    <label>Date</label><input type="text" ngControl="date" class="form-control">
+	</div>
+	<div class="form-group">
+	    <label>Price</label><input type="text" ngControl="price" class="form-control">
+	</div>
+	<div class="form-group">
+	    <label>Venue</label><input type="text" ngControl="venue" class="form-control">
+	</div>
+<button type="submit" [disabled]="!userForm.valid" [class]="userForm.valid ? 'btn-success': ''">+ ADD</button>
+</form>
