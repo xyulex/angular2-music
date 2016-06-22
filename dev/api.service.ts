@@ -8,14 +8,14 @@ export class ApiService {
 	initialized = false;
 
     constructor(private http:Http) { }
-	
-    getGigs() {  
+
+    getGigs() {
     	return this.http.get('http://localhost:18000/api/gigs/')
-    		.map(res => res.json());    		
+    	       .map(res => res.json());
    	}
 
-    getGigDetail(gigID) {        
+    getGigDetail(gigID) {
         return this.http.get('http://localhost:18000/api/gigs/' + gigID)
-        .map(res => res.json())        
+                .map(res => res.json())
     }
 }

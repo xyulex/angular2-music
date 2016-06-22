@@ -6,11 +6,11 @@ import {ApiService} from './api.service';
     template: `
         <h1>Gigs list</h1>
         <div class="searchResults" *ngIf = "gigs">
-        	<table>
+        	<table class="table">
             	<tr *ngFor="#data of gigs">
-                <td>{{ data.date | slice:0:10}}</td>
+                <td width="10%">{{ data.date | slice:0:10}}</td>
                 <td><a href="#" (click)="getGigDetail(data._id)">{{ data.bands}}</a></td>
-                <td> {{ data.venue }} </td>
+                <td width="20%"> {{ data.venue }} </td>
                 </tr>
         	</table>
         </div>`
