@@ -23,7 +23,7 @@ export class AddGigComponent {
         .getGigs()
         .subscribe(gigs => this.gigs = gigs,
             error => console.log(error),
-            () => console.log(gigs)
+            () => console.log('Gigs loaded in add gig component')
         );
     }
 }

@@ -10,8 +10,8 @@
 	    <label>Price</label><input type="text" ngControl="price" class="form-control">
 	</div>
 	<div class="form-group">
-		<select>
-		<option *ngFor="#venue of gigs">{{ venue.venue }}</option>
+		<select ngControl="venue">
+		<option *ngFor="#venue of gigs" [value]="venue.venue">{{ venue.venue }}</option>
 		</select>
 
 	</div>
