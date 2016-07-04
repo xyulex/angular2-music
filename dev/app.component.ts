@@ -8,12 +8,12 @@ import 'rxjs/add/operator/map';
 @RouteConfig([
   { path: '/', name: 'Gigs', component: GigsComponent },
   { path: '/add/', name: 'AddGig', component: AddGigComponent },
-  { path: '/bands/', name: 'Bands', component: BandsComponent }
+  { path: '/bands/', name: 'Bands', component: BandsComponent },
 ])
 
 @Component({
     selector: 'searchBox',
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES],
     template: `
         <nav>
             <ul>
