@@ -26,12 +26,4 @@ export class AddGigComponent {
             () => console.log('Gigs loaded in add gig component')
         );
     }
-
-   /* this._apiservice
-        .addGigs()
-        .subscribe(gigs => this.gigs = gigs,
-            error => console.log(error),
-            () => console.log('Gigs loaded in add gig component')
-        );
-    }*/
 }

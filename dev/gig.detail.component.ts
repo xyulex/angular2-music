@@ -1,33 +1,26 @@
 import {Component} from 'angular2/core';
-import {Http, HTTP_PROVIDERS} from 'angular2/http';
 import {ApiService} from './api.service';
+import {RouteParams} from 'angular2/router';
 
 @Component({
     template: `
-        <h1>Gig detail</h1>
-        <div class="gigDetail" *ngIf = "gigDetail">
+        
+        <div class="gigDetail" *ngIf="gigDetail">
+        <h1>{{ gigDetail.bands }}</h1>
         	<table class="table">
-            	<tr>
-                <td width="10%"> {{ gigDetail.date | slice:0:10}} </td>
-                <td> {{ gigDetail.bands }} </td>
-                <td width="20%"> {{ gigDetail.venue }} </td>
-                </tr>
+            	<tr><td> {{ gigDetail.date | slice:0:10}} </td></tr>
+                <tr><td> {{ gigDetail.venue }} </td></tr>
+                <tr><td> {{ gigDetail.price | currency }} </td></tr>
         	</table>
         </div>`
 })
 
 export class GigDetailComponent {
-    constructor(private _apiservice: ApiService) { }
-
-    ngOnInit() {
-        
-    }
-
-    public getGigDetail(gigID) {
+    constructor(private _apiservice: ApiService, params:RouteParams) {
         this._apiservice
-            .getGigDetail(gigID)
+            .getGigDetail(params.get('id'))
             .subscribe(gigDetail => this.gigDetail = gigDetail,
                 error => console.log('Gig detail error'),
-                () => console.log('Gig detail loaded' + this.gigDetail));
+                () => console.log('Gig detail loaded' + this.gigDetail));    
     }
 }

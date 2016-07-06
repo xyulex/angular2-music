@@ -1,6 +1,5 @@
 import {Injectable} from 'angular2/core';
-import {Http, Response} from 'angular2/http';
-import {Observable} from 'rxjs/Rx';
+import {Http} from 'angular2/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -19,10 +18,4 @@ export class ApiService {
         return this.http.get(this.urlApi + '/gigs/' + gigID)
                 .map(res => res.json())
     }
-
-    /*addGig() { 
-        return this.http.post(this.urlApi + '/gigs/')
-                .map(res => res.json())
-
-    }*/
 }
