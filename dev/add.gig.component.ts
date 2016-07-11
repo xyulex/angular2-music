@@ -26,4 +26,15 @@ export class AddGigComponent {
             () => console.log('Gigs loaded in add gig component')
         );
     }
+
+    addGig () {
+      return this._apiservice
+          .addGig(this.userForm)
+          .subscribe(console.log("enviado"),
+            error => console.log(error),
+          () => location.href = '/'
+          );
+    }
+
+
 }

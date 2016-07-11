@@ -8,8 +8,7 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
         <div class="searchResults" *ngIf = "gigs">
         	<table class="table">
             	<tr *ngFor="#data of gigs">
-                <td width="10%">{{ data.date | slice:0:10}}</td>
-                
+                <td width="10%">{{ data.date | slice:0:10}}</td>                
                 <td><a [routerLink] = " ['GigDetail', {id: data._id }] ">{{ data.bands}}</a>
                 <td width="20%"> {{ data.venue }} </td>
                 </tr>
