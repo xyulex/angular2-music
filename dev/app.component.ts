@@ -1,8 +1,8 @@
 import {Component, Injectable} from 'angular2/core';
-import {AddGigComponent} from  './add.gig.component';
-import {BandsComponent}  from  './bands.component';
-import {GigsComponent}   from  './gigs.component';
-import {GigDetailComponent}   from  './gig.detail.component';
+import {AddGigComponent} from  './components/add.gig.component';
+import {BandsComponent}  from  './components/bands.component';
+import {GigsComponent}   from  './components/gigs.component';
+import {GigDetailComponent}   from  './components/gig.detail.component';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import 'rxjs/add/operator/map';
 

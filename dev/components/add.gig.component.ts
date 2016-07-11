@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
 import {FormBuilder, ControlGroup, Validators} from 'angular2/common';
-import {ApiService} from './api.service';
+import {ApiService} from '../services/api.service';
 
 @Component({
   selector: 'add-gig-form',
@@ -16,7 +16,7 @@ export class AddGigComponent {
       bands: fb.control('', Validators.compose([Validators.required, Validators.minLength(3)])),
       date: fb.control('', Validators.required),
       price: fb.control('', Validators.required),
-      venue: fb.control('', Validators.required)
+      venue: fb.control('', Validators.required) 
     });
 
     this._apiservice
@@ -32,7 +32,7 @@ export class AddGigComponent {
           .addGig(this.userForm)
           .subscribe(console.log("enviado"),
             error => console.log(error),
-          () => location.href = '/'
+          () => console.log("FIN")
           );
     }
 

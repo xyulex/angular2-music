@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {ApiService} from './api.service';
+import {ApiService} from '../services/api.service';
 import {RouteParams, Router} from 'angular2/router';
 
 @Component({
