@@ -1,9 +1,11 @@
 import {Component} from 'angular2/core';
 import {ApiService} from '../services/api.service';
 import {RouteParams, Router} from 'angular2/router';
+import {CurrencyPipe} from '/app/pipes/currency.pipe';
 
 @Component({
-    templateUrl: '/app/templates/gig-detail.html'
+    templateUrl: '/app/templates/gig-detail.html',
+    pipes: [CurrencyPipe]
 })
 
 export class GigDetailComponent {

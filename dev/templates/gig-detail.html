@@ -3,7 +3,7 @@
 	<table class="table">
     	<tr><td> {{ gigDetail.date | slice:0:10 }} </td></tr>
         <tr><td> {{ gigDetail.venue }} </td></tr>
-        <tr><td> {{ gigDetail.price | currency:'EUR' }} </td></tr>
+        <tr><td> {{ gigDetail.price | currencyPipe:{ gigDate: gigDetail.date | slice:0:4} }}</td></tr>
         <tr><td><button type="button" class="btn btn-info" (click)="goToIndex()"><< Back</button></td></tr>
 	</table>
 </div>
