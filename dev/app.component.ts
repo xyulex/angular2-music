@@ -1,4 +1,4 @@
-import {Component, Injectable} from 'angular2/core';
+import {Component, Injectable} from 'angular2/core'; 
 import {AddGigComponent} from  './components/add.gig.component';
 import {BandsComponent}  from  './components/bands.component';
 import {GigsComponent}   from  './components/gigs.component';

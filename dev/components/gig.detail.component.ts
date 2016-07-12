@@ -3,16 +3,7 @@ import {ApiService} from '../services/api.service';
 import {RouteParams, Router} from 'angular2/router';
 
 @Component({
-    template: `        
-        <div class="gigDetail" *ngIf="gigDetail">
-        <h1>{{ gigDetail.bands }}</h1>
-        	<table class="table">
-            	<tr><td> {{ gigDetail.date | slice:0:10 }} </td></tr>
-                <tr><td> {{ gigDetail.venue }} </td></tr>
-                <tr><td> {{ gigDetail.price | currency }} </td></tr>
-                <tr><td><button type="button" class="btn btn-info" (click)="goToIndex()"><< Back</button></td></tr>
-        	</table>
-        </div>`
+    templateUrl: '/app/templates/gig-detail.html'
 })
 
 export class GigDetailComponent {

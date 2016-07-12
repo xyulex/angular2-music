@@ -60,6 +60,7 @@ gulp.task('watch', function () {
     gulp.watch(appDev + '**/*.ts', ['build-ts']);
     gulp.watch(assetsDev + 'scss/**/*.scss', ['build-css']);
     gulp.watch(assetsDev + 'img/*', ['build-img']);
+    gulp.watch(appDev + '**/*.html', ['build-html']);
 });
 
-gulp.task('default', ['watch', 'build-ts', 'build-css']);
+gulp.task('default', ['watch', 'build-ts', 'build-css', 'build-html']);
