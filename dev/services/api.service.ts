@@ -24,4 +24,9 @@ export class ApiService {
         let options = new RequestOptions({ headers: headers });
         return this.http.post(this.urlApi + '/gigs/', body, options);
     }
+    
+    deleteGig(gigID) {
+        return this.http.delete(this.urlApi + '/gigs/' + gigID)
+            .map(res => res.json())        
+    }
 }

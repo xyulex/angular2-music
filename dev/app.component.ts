@@ -19,9 +19,9 @@ import 'rxjs/add/operator/map';
     template: `
         <nav>
             <ul>
-                <a [routerLink] = " ['Gigs'] ">Start</a>
-                <a [routerLink] = " ['AddGig'] ">Add gig</a>
-                <a [routerLink] = " ['Bands'] ">Bands seen</a>
+                <span class="glyphicon glyphicon-home"></span> <a [routerLink] = " ['Gigs'] ">Start</a>
+                <span class="glyphicon glyphicon-plus"></span> <a [routerLink] = " ['AddGig'] ">Add gig</a>
+                <span class="glyphicon glyphicon-ok"></span> <a [routerLink] = " ['Bands'] ">Bands seen</a>
             </ul>
         </nav>
         <router-outlet></router-outlet>
@@ -29,5 +29,5 @@ import 'rxjs/add/operator/map';
 })
 
 @Injectable()
-export class AppComponent {
+export class AppComponent {    
 }

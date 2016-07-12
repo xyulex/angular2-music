@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core';
 import {ApiService} from '../services/api.service';
 import {RouteParams, Router} from 'angular2/router';
-import {CurrencyPipe} from '/app/pipes/currency.pipe';
+import {CurrencyPipe} from '../pipes/currency.pipe';
 
 @Component({
     templateUrl: '/app/templates/gig-detail.html',
@@ -18,6 +18,6 @@ export class GigDetailComponent {
     }
 
     goToIndex () {
-        this.router.navigate(['Gigs']);
+        this.router.navigate(['Gigs']); 
     }
 }

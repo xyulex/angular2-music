@@ -9,11 +9,21 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 export class GigsComponent {
     constructor(private _apiservice:ApiService) {
+        let edit_mode = false;
         this._apiservice
             .getGigs()
             .subscribe(gigs => this.gigs = gigs,
                 error => console.log(error),
                 () => console.log('Gigs loaded')
             );
+    }
+
+    deleteGig(gigID) {
+        this._apiservice
+            .deleteGig(gigID)
+            .subscribe(console.log('Gig successfully deleted')
+            error => console.log(error),
+            () => location.href = '/'
+        );
     }
 }

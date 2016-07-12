@@ -1,6 +1,7 @@
 <div class="gigDetail" *ngIf="gigDetail">
     <h1>{{ gigDetail.bands }}</h1>
 	<table class="table">
+        <tr><td><img src="/app/img/{{gigDetail._id}}.jpg"></td></tr>
     	<tr><td> {{ gigDetail.date | slice:0:10 }} </td></tr>
         <tr><td> {{ gigDetail.venue }} </td></tr>
         <tr><td> {{ gigDetail.price | currencyPipe:{ gigDate: gigDetail.date | slice:0:4} }}</td></tr>
