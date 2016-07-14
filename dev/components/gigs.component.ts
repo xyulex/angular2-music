@@ -8,7 +8,7 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 })
 
 export class GigsComponent {
-    public editing:boolean = true;
+    public editing:boolean = false;
         
     constructor(private _apiservice:ApiService) {
         this._apiservice
