@@ -1,8 +1,8 @@
-<h1>Gigs list</h1>
+<h1>Gigs list</h1><div style="float:right"><span class="glyphicon glyphicon-pencil"></span> <a href="#" (click)="toggleEdit()">Edit</a></div>
 <div class="searchResults" *ngIf = "gigs">
 	<table class="table">
     	<tr *ngFor="#data of gigs">
-        <td><button type="button" class= "btn btn-danger" (click)="deleteGig(data._id)">X</button></td>
+        <td *ngIf="editing"><button type="button" class= "btn btn-danger" (click)="deleteGig(data._id)">X</button></td>
         <td width="10%">{{ data.date | slice:0:10}}</td>                
         <td><a [routerLink] = " ['GigDetail', {id: data._id }] ">{{ data.bands}}</a>
         <td width="20%"> {{ data.venue }} </td>

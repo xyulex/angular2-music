@@ -8,8 +8,9 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 })
 
 export class GigsComponent {
+    public editing:boolean = true;
+        
     constructor(private _apiservice:ApiService) {
-        let edit_mode = false;
         this._apiservice
             .getGigs()
             .subscribe(gigs => this.gigs = gigs,
@@ -19,11 +20,19 @@ export class GigsComponent {
     }
 
     deleteGig(gigID) {
-        this._apiservice
-            .deleteGig(gigID)
-            .subscribe(console.log('Gig successfully deleted')
-            error => console.log(error),
-            () => location.href = '/'
-        );
+        if (confirm("Are you sure?")) {
+            this._apiservice
+                .deleteGig(gigID)
+                .subscribe(console.log('Gig successfully deleted'),
+                error => console.log(error),
+                () => location.href = '/'
+            );
+        }
+        
+        return false;
+    }
+
+    toggleEdit() {
+        return this.editing = !this.editing;
     }
 }
